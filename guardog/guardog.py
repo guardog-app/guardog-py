@@ -57,7 +57,7 @@ class Guardog:
                         log=traceback.format_exc(),
                         tag=tag
                     )
-                    # raise
+                    raise
             return wrapper
 
         return inner
