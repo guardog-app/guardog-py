@@ -2,17 +2,21 @@ import json
 import pytz
 import requests
 import traceback
+import importlib.metadata
 
 from datetime import datetime
 
 from .settings import BACKEND_APP_CRASH_ALERTS_URL
 
 
+version = importlib.metadata.version('guardog')
+
+
 def alert(uid: str, service_id: str, api_key: str, datetime: datetime, log: str, tag: str | None):
 
     try:
         response = requests.post(
-            BACKEND_APP_CRASH_ALERTS_URL + f'/uid/{uid}/service-id/{service_id}/alert',
+            BACKEND_APP_CRASH_ALERTS_URL + f'/v{version}/uid/{uid}/service-id/{service_id}/alert',
             data=json.dumps({
                 'datetime': datetime.isoformat(),
                 'log': log,
