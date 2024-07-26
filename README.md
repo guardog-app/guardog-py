@@ -1,5 +1,5 @@
 ## guardog-py
-Guardog is a simple and easy-to-use application monitoring and alerting tool. It notifies you of runtime errors in realtime so that you can stay on top of issues and focus on delivering quality code to your users.
+[Guardog](https://guardog.app) is a simple and easy-to-use application monitoring and alerting tool. It notifies you of runtime errors in realtime so that you can stay on top of issues and focus on delivering quality code to your users.
 
 ![guardog with python](https://guardog-website-assets.s3.eu-north-1.amazonaws.com/guardog_py_640_360.jpg)
 
