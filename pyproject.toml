@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "guardog"
-version = "0.7.0"
+version = "1.0.0"
 description = ""
 authors = ["Gautham Reddy <gautham@guardog.app>"]
 readme = "README.md"
