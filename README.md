@@ -52,4 +52,4 @@ And that's it! You are all set to receive alerts everytime your program crashes 
 
 For any issues, feedbacks and suggestions contact gautham@guardog.app
 
-Blog - https://www.guardog.app/blog/guardog-python
+**Blog** - https://www.guardog.app/blog/guardog-python

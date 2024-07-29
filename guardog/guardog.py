@@ -68,7 +68,7 @@ class Guardog:
 
     def alert(self, error_log: str, tag: str = None):
 
-        dt = datetime.utcnow()
+        dt = datetime.now(tz=datetime.timezone.utc)
         dt = dt.replace(tzinfo=pytz.utc)
         alert(
             uid=self.uid,
