@@ -14,7 +14,7 @@ version = importlib.metadata.version('guardog')
 
 
 def current_utc_datetime():
-    return datetime.now(tzinfo=pytz.utc)
+    return datetime.now(pytz.utc)
 
 
 async def alert(uid: str, service_id: str, api_key: str, datetime: datetime, log: str, tag: str | None):
