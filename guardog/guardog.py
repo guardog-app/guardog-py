@@ -3,11 +3,13 @@ import pytz
 import asyncio
 import httpx
 import traceback
+import warnings
 import importlib.metadata
 
 from datetime import datetime
 
 from .settings import BACKEND_APP_CRASH_ALERTS_URL
+from .warnings import GuardogWarning
 
 
 version = importlib.metadata.version('guardog')
@@ -38,9 +40,9 @@ async def alert(uid: str, service_id: str, api_key: str, datetime: datetime, log
             if response.status_code == 200:
                 pass
             else:
-                raise httpx.RequestError(response.text, request=response.request)
+                warnings.warn(response.text, GuardogWarning)
         except httpx.RequestError as e:
-            raise e
+            warnings.warn(str(e), GuardogWarning)
 
 
 class Guardog:
